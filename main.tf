@@ -1,4 +1,4 @@
-resource "tfe_project" "base-infra" {
+resource "tfe_project" "base_infra" {
   organization = data.tfe_organization.main.name
   name         = "base_infrastructure"
 }
