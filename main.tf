@@ -1,4 +1,4 @@
-resource "tfe_project" "baseinfra" {
+resource "tfe_project" "base_infra" {
   organization = "HashiCorp_TFC_Automation_Demo"
   name         = "baseinfra"
 }
