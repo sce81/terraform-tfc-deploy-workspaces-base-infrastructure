@@ -3,7 +3,7 @@ terraform {
     organization = "HashiCorp_TFC_Automation_Demo"
 
     workspaces {
-      name = "terraform-env-tfc-workspaces-base-infrastructure"
+      name = "deploy-tfc-workspaces-base-infra"
     }
   }
   required_providers {

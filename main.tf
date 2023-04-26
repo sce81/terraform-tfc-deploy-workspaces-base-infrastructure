@@ -1,6 +1,6 @@
 resource "tfe_project" "base_infra" {
   organization = data.tfe_organization.main.name
-  name         = "base_infrastructure"
+  name         = "base_infra"
 }
 
 
@@ -14,5 +14,5 @@ module "AWS_Workspace_Base_Infra" {
   tfe_variables                 = each.value
   project_id                    = tfe_project.base_infra.id
   structured_run_output_enabled = "true"
-  workspace_tags                = [each.key, "terraform-workspaces", "base_infra"]
+  workspace_tags                = [each.key, "aws", "base_infra", "platform"]
 }
