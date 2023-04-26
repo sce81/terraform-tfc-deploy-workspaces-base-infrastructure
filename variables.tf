@@ -8,6 +8,11 @@ variable "github_app_id" {
   description = "VCS Token ID to access repo"
   default     = null
 }
+variable "github_installation_id" {
+  type        = number
+  description = "VCS installation ID to access repo"
+  default     = null
+}
 variable "automation_git_branch" {
   type        = string
   description = "branch of repo to pull from VCS"
