@@ -3,11 +3,7 @@ variable "organization" {
   type        = string
   description = "workspace to deploy to"
 }
-variable "github_app_id" {
-  type        = string
-  description = "VCS Token ID to access repo"
-  default     = null
-}
+
 variable "github_installation_id" {
   type        = string
   description = "VCS installation ID to access repo"
@@ -18,3 +14,4 @@ variable "automation_git_branch" {
   description = "branch of repo to pull from VCS"
   default     = "main"
 }
+
