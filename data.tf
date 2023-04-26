@@ -3,7 +3,7 @@ data "tfe_organization" "main" {
 }
 
 data "tfe_github_app_installation" "github" {
-  installation_id = var.github_installation.id
+  installation_id = var.github_installation_id.id
 }
 
 locals {
