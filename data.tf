@@ -3,7 +3,7 @@ data "tfe_organization" "main" {
 }
 
 data "tfe_github_app_installation" "github" {
-  name = "GitHub"
+  name = "33671711"
 }
 
 locals {
