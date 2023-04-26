@@ -2,16 +2,12 @@ data "tfe_organization" "main" {
   name = var.organization
 }
 
-data "tfe_github_app_installation" "github" {
-  installation_id = var.github_installation_id.id
-}
-
 locals {
 
   base_infra_repo = [
     {
       identifier                 = "sce81/terraform-aws-infrastructure-network-layer"
-      github_app_installation_id = data.tfe_github_app_installation.github.id
+      github_app_installation_id = var.github_installation_id
       branch                     = "main"
     }
   ]
