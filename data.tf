@@ -11,7 +11,7 @@ locals {
   base_infra_repo = [
     {
       identifier                 = "sce81/terraform-aws-infrastructure-network-layer"
-      github_app_installation_id = data.tfe_github_app_installation.installation_id
+      github_app_installation_id = data.tfe_github_app_installation.github.installation_id
       branch                     = "main"
     }
   ]
