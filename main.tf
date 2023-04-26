@@ -16,6 +16,6 @@ module "AWS_Workspace_Base_Infra" {
   workspace_tags                = [each.key, "aws", "base_infra", "platform"]
 
   depends_on = [
-    tfe_project.base_infra.id
+    tfe_project.base_infra
   ]
 }
