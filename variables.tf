@@ -9,7 +9,7 @@ variable "github_app_id" {
   default     = null
 }
 variable "github_installation_id" {
-  type        = number
+  type        = string
   description = "VCS installation ID to access repo"
   default     = null
 }
