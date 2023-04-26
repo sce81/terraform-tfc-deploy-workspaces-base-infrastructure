@@ -1,6 +1,6 @@
-resource "tfe_project" "base_infra" {
+resource "tfe_project" "baseinfra" {
   organization = "HashiCorp_TFC_Automation_Demo"
-  name         = "base_infra"
+  name         = "baseinfra"
 }
 
 module "AWS_Workspace_Base_Infra" {
