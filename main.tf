@@ -20,4 +20,3 @@ module "AWS_Workspace_Base_Infra" {
     tfe_project.base_infra
   ]
 }
-
