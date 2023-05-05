@@ -56,16 +56,6 @@ locals {
           category    = "terraform"
           hcl         = true
         },
-        "auto_apply" = {
-          value       = "true"
-          description = "boolean flag on whether terraform apply runs will be automatically accepted"
-          category    = "terraform"
-        },
-        "structured_run_output_enabled" = {
-          value       = "true"
-          description = "boolean flag on whether terraform plan outputs use the structured or classic run reporting"
-          category    = "terraform"
-        },
         "cross_account_role" = {
           value       = "development_base_infra_role"
           description = "IAM Role for Terraform runner to assume"
@@ -117,7 +107,53 @@ locals {
           category    = "terraform"
         },
       },
-      "production" = {
+      
+"production" = {
+        "vpc_name" = {
+          value       = "automation"
+          description = "vpc name identifier"
+          category    = "terraform"
+        },
+        "env_name" = {
+          value       = "production"
+          description = "env name for identifier"
+          category    = "terraform"
+        },
+        "project_name" = {
+          value       = "TFC Automation"
+          description = "Project name for tagging purposes"
+          category    = "terraform"
+        },
+        "vpc_cidr" = {
+          value       = "10.2.0.0/20"
+          description = "vpc network cidr"
+          category    = "terraform"
+        },
+        "public_subnet_cidr" = {
+          value       = join(", ", ["10.2.1.0/24", "10.2.2.0/24", "10.2.3.0/24"])
+          description = "public subnets cidr"
+          category    = "terraform"
+          hcl         = true
+        },
+        "private_subnet_cidr" = {
+          value       = join(", ", ["10.2.4.0/24", "10.2.5.0/24", "10.2.6.0/24"])
+          description = "public subnets cidr"
+          category    = "terraform"
+          hcl         = true
+        },
+        "database_subnet_cidr" = {
+          value       = join(", ", ["10.2.7.0/24", "10.2.8.0/24", "10.2.9.0/24"])
+          description = "public subnets cidr"
+          category    = "terraform"
+          hcl         = true
+        },
+        "cross_account_role" = {
+          value       = "production_base_infra_role"
+          description = "IAM Role for Terraform runner to assume"
+          category    = "terraform"
+        },
+      },
+    "production-us" = {
         "vpc_name" = {
           value       = "automation"
           description = "vpc name identifier"
