@@ -118,106 +118,56 @@ locals {
         }
       },
       
-"production" = {
-        "vpc_name" = {
-          value       = "automation"
-          description = "vpc name identifier"
-          category    = "terraform"
-        },
-        "env_name" = {
-          value       = "production"
-          description = "env name for identifier"
-          category    = "terraform"
-        },
-        "project_name" = {
-          value       = "TFC Automation"
-          description = "Project name for tagging purposes"
-          category    = "terraform"
-        },
-        "vpc_cidr" = {
-          value       = "10.2.0.0/20"
-          description = "vpc network cidr"
-          category    = "terraform"
-        },
-        "public_subnet_cidr" = {
-          value       = join(", ", ["10.2.1.0/24", "10.2.2.0/24", "10.2.3.0/24"])
-          description = "public subnets cidr"
-          category    = "terraform"
-          hcl         = true
-        },
-        "private_subnet_cidr" = {
-          value       = join(", ", ["10.2.4.0/24", "10.2.5.0/24", "10.2.6.0/24"])
-          description = "public subnets cidr"
-          category    = "terraform"
-          hcl         = true
-        },
-        "database_subnet_cidr" = {
-          value       = join(", ", ["10.2.7.0/24", "10.2.8.0/24", "10.2.9.0/24"])
-          description = "public subnets cidr"
-          category    = "terraform"
-          hcl         = true
-        },
-        "cross_account_role" = {
-          value       = "production_base_infra_role"
-          description = "IAM Role for Terraform runner to assume"
-          category    = "terraform"
-        },
-        "enable_natgw" = {
-          value = true
-          description = "deploy transit gateway to this environment"
-          category = "terraform"
-        }
-      },
-"production2" = {
-        "vpc_name" = {
-          value       = "automation"
-          description = "vpc name identifier"
-          category    = "terraform"
-        },
-        "env_name" = {
-          value       = "production"
-          description = "env name for identifier"
-          category    = "terraform"
-        },
-        "project_name" = {
-          value       = "TFC Automation"
-          description = "Project name for tagging purposes"
-          category    = "terraform"
-        },
-        "vpc_cidr" = {
-          value       = "10.2.0.0/20"
-          description = "vpc network cidr"
-          category    = "terraform"
-        },
-        "public_subnet_cidr" = {
-          value       = join(", ", ["10.2.1.0/24", "10.2.2.0/24", "10.2.3.0/24"])
-          description = "public subnets cidr"
-          category    = "terraform"
-          hcl         = true
-        },
-        "private_subnet_cidr" = {
-          value       = join(", ", ["10.2.4.0/24", "10.2.5.0/24", "10.2.6.0/24"])
-          description = "public subnets cidr"
-          category    = "terraform"
-          hcl         = true
-        },
-        "database_subnet_cidr" = {
-          value       = join(", ", ["10.2.7.0/24", "10.2.8.0/24", "10.2.9.0/24"])
-          description = "public subnets cidr"
-          category    = "terraform"
-          hcl         = true
-        },
-        "cross_account_role" = {
-          value       = "production_base_infra_role"
-          description = "IAM Role for Terraform runner to assume"
-          category    = "terraform"
-        },
-        "enable_natgw" = {
-          value = true
-          description = "deploy transit gateway to this environment"
-          category = "terraform"
-        }
-      },
+//"production" = {
+//        "vpc_name" = {
+//          value       = "automation"
+//          description = "vpc name identifier"
+//          category    = "terraform"
+//        },
+//        "env_name" = {
+//          value       = "production"
+//          description = "env name for identifier"
+//          category    = "terraform"
+//        },
+//        "project_name" = {
+//          value       = "TFC Automation"
+//          description = "Project name for tagging purposes"
+//          category    = "terraform"
+//        },
+//        "vpc_cidr" = {
+//          value       = "10.2.0.0/20"
+//          description = "vpc network cidr"
+//          category    = "terraform"
+//        },
+//        "public_subnet_cidr" = {
+//          value       = join(", ", ["10.2.1.0/24", "10.2.2.0/24", "10.2.3.0/24"])
+//          description = "public subnets cidr"
+//          category    = "terraform"
+//          hcl         = true
+//        },
+//        "private_subnet_cidr" = {
+//          value       = join(", ", ["10.2.4.0/24", "10.2.5.0/24", "10.2.6.0/24"])
+//          description = "public subnets cidr"
+//          category    = "terraform"
+//          hcl         = true
+//        },
+//        "database_subnet_cidr" = {
+//          value       = join(", ", ["10.2.7.0/24", "10.2.8.0/24", "10.2.9.0/24"])
+//          description = "public subnets cidr"
+//          category    = "terraform"
+//          hcl         = true
+//        },
+//        "cross_account_role" = {
+//          value       = "production_base_infra_role"
+//          description = "IAM Role for Terraform runner to assume"
+//          category    = "terraform"
+//        },
+//        "enable_natgw" = {
+//          value = true
+//          description = "deploy transit gateway to this environment"
+//          category = "terraform"
+//        }
+//      },
     }
   }
 }
