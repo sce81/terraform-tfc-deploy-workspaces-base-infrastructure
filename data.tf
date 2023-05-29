@@ -9,7 +9,7 @@ locals {
 
   base_infra_repo = [
     {
-      identifier                 = "sce81/terraform-aws-infrastructure-network-layer"
+      identifier                 = "sce81/terraform-aws-base-network-root-module"
       github_app_installation_id = data.tfe_github_app_installation.github.id
       branch                     = "main"
     }
