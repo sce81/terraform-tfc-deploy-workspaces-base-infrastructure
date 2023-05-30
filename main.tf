@@ -14,7 +14,7 @@ module "AWS_Workspace_Base_Infra" {
   tfe_variables                 = each.value
   project_id                    = tfe_project.base_infra.id
   structured_run_output_enabled = "false"
-  workspace_tags                = [each.key, "aws", "base_infra", "platform"]
+  workspace_tags                = [each.key, "aws", "base_infra", "platform", "aws-ug"]
   sentinel_policy               = ["Require-Resources-from-PMR","Enforce-Tagging-Policy"]
   depends_on = [
     tfe_project.base_infra
