@@ -6,7 +6,7 @@ resource "tfe_project" "base_infra" {
 
 module "AWS_Workspace_Base_Infra" {
   for_each                      = local.workspace_vars.base_infra_vars
-  source                        = "app.terraform.io/HashiCorp_TFC_Automation_Demo/tfc-workspace-management/module"
+  source                        = "app.terraform.io/HashiCorp_TFC_Automation_Demo/workspace-management/tfc"
   version                       = "2.0.8"
   name                          = "aws_workspace_base_infra_${each.key}"
   organization                  = data.tfe_organization.main.name
@@ -20,4 +20,3 @@ module "AWS_Workspace_Base_Infra" {
     tfe_project.base_infra
   ]
 }
-
