@@ -19,7 +19,7 @@ locals {
     base_infra_vars = {
       "dev" = {
         "vpc_name" = {
-          value       = "aws-usergroup"
+          value       = "demo"
           description = "vpc name identifier"
           category    = "terraform"
         },
@@ -69,7 +69,7 @@ locals {
       },
       "staging" = {
         "vpc_name" = {
-          value       = "aws-usergroup"
+          value       = "demo"
           description = "vpc name identifier"
           category    = "terraform"
         },
@@ -120,7 +120,7 @@ locals {
       
 "production" = {
         "vpc_name" = {
-          value       = "aws-usergroup"
+          value       = "demo"
           description = "vpc name identifier"
           category    = "terraform"
         },
