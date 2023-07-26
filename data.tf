@@ -62,9 +62,14 @@ locals {
           category    = "terraform"
         },
         "enable_natgw" = {
-          value = true
+          value       = false
           description = "deploy transit gateway to this environment"
-          category = "terraform"
+          category    = "terraform"
+        },
+        "enable_igw" = {
+          value       = false
+          description = "deploy internet gateway to this environment"
+          category    = "terraform"
         }
       },
       "staging" = {
@@ -112,13 +117,18 @@ locals {
           category    = "terraform"
         },
         "enable_natgw" = {
-          value = true
+          value       = false
           description = "deploy transit gateway to this environment"
-          category = "terraform"
+          category    = "terraform"
+        },
+        "enable_igw" = {
+          value       = false
+          description = "deploy internet gateway to this environment"
+          category    = "terraform"
         }
       },
-      
-"production" = {
+
+      "production" = {
         "vpc_name" = {
           value       = "demo"
           description = "vpc name identifier"
@@ -163,9 +173,14 @@ locals {
           category    = "terraform"
         },
         "enable_natgw" = {
-          value = true
+          value       = false
           description = "deploy transit gateway to this environment"
-          category = "terraform"
+          category    = "terraform"
+        },
+        "enable_igw" = {
+          value       = false
+          description = "deploy internet gateway to this environment"
+          category    = "terraform"
         }
       },
     }
