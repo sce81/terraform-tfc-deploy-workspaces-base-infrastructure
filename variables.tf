@@ -16,3 +16,8 @@ variable "automation_git_branch" {
   default     = "main"
 }
 
+variable "infra_policies" {
+  type        = list(string)
+  description = "Additional Sentinel Policies to be added to environment"
+  default     = []
+}
