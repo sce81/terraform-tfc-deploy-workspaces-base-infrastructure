@@ -6,7 +6,6 @@ resource "tfe_project" "base_infra" {
 
 module "AWS_Workspace_Base_Infra" {
   for_each = local.workspace_vars.base_infra_vars
-  //source = "/Users/simon.elliott/Documents/Code/Terraform/environments/terraform-cloud/tfc-modules/terraform-tfc-deploy-workspaces"
 
   source                        = "app.terraform.io/HashiCorp_TFC_Automation_Demo/workspace-management/tfc"
   version                       = "2.0.8"
