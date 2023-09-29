@@ -145,24 +145,24 @@ locals {
           category    = "terraform"
         },
         "vpc_cidr" = {
-          value       = "10.2.0.0/20"
+          value       = "10.10.0.0/20"
           description = "vpc network cidr"
           category    = "terraform"
         },
         "public_subnet_cidr" = {
-          value       = join(", ", ["10.2.1.0/24", "10.2.2.0/24", "10.2.3.0/24"])
+          value       = join(", ", ["10.10.1.0/24", "10.10.2.0/24", "10.10.3.0/24"])
           description = "public subnets cidr"
           category    = "terraform"
           hcl         = true
         },
         "private_subnet_cidr" = {
-          value       = join(", ", ["10.2.4.0/24", "10.2.5.0/24", "10.2.6.0/24"])
+          value       = join(", ", ["10.10.4.0/24", "10.10.5.0/24", "10.10.6.0/24"])
           description = "public subnets cidr"
           category    = "terraform"
           hcl         = true
         },
         "database_subnet_cidr" = {
-          value       = join(", ", ["10.2.7.0/24", "10.2.8.0/24", "10.2.9.0/24"])
+          value       = join(", ", ["10.10.7.0/24", "10.10.8.0/24", "10.10.9.0/24"])
           description = "public subnets cidr"
           category    = "terraform"
           hcl         = true
@@ -175,6 +175,61 @@ locals {
         "enable_natgw" = {
           value       = false
           description = "deploy transit gateway to this environment"
+          category    = "terraform"
+        },
+        "enable_igw" = {
+          value       = false
+          description = "deploy internet gateway to this environment"
+          category    = "terraform"
+        }
+      },
+      "public" = {
+        "vpc_name" = {
+          value       = "demo"
+          description = "vpc name identifier"
+          category    = "terraform"
+        },
+        "env_name" = {
+          value       = "public"
+          description = "env name for identifier"
+          category    = "terraform"
+        },
+        "project_name" = {
+          value       = "TFC Automation"
+          description = "Project name for tagging purposes"
+          category    = "terraform"
+        },
+        "vpc_cidr" = {
+          value       = "10.10.0.0/20"
+          description = "vpc network cidr"
+          category    = "terraform"
+        },
+        "public_subnet_cidr" = {
+          value       = join(", ", ["10.10.1.0/24", "10.10.2.0/24", "10.10.3.0/24"])
+          description = "public subnets cidr"
+          category    = "terraform"
+          hcl         = true
+        },
+        "private_subnet_cidr" = {
+          value       = join(", ", ["10.10.4.0/24", "10.10.5.0/24", "10.10.6.0/24"])
+          description = "public subnets cidr"
+          category    = "terraform"
+          hcl         = true
+        },
+        "database_subnet_cidr" = {
+          value       = join(", ", ["10.10.7.0/24", "10.10.8.0/24", "10.10.9.0/24"])
+          description = "public subnets cidr"
+          category    = "terraform"
+          hcl         = true
+        },
+        "cross_account_role" = {
+          value       = "public_base_infra_role"
+          description = "IAM Role for Terraform runner to assume"
+          category    = "terraform"
+        },
+        "enable_natgw" = {
+          value       = false
+          description = "deploy NAT gateway to this environment"
           category    = "terraform"
         },
         "enable_igw" = {
