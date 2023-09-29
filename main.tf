@@ -7,8 +7,8 @@ resource "tfe_project" "base_infra" {
 module "AWS_Workspace_Base_Infra" {
   for_each = local.workspace_vars.base_infra_vars
 
-  source                        = "app.terraform.io/HashiCorp_TFC_Automation_Demo/workspace-management/tfc"
-  version                       = "2.0.8"
+  source                        = "app.terraform.io/HashiCorp_TFC_Automation_Demo/workspace-management/tfe"
+  version                       = "2.0.9"
   name                          = "aws_workspace_base_infra_${each.key}"
   organization                  = data.tfe_organization.main.name
   vcs_repo                      = local.base_infra_repo
