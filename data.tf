@@ -228,12 +228,12 @@ locals {
           category    = "terraform"
         },
         "enable_natgw" = {
-          value       = false
+          value       = true
           description = "deploy NAT gateway to this environment"
           category    = "terraform"
         },
         "enable_igw" = {
-          value       = false
+          value       = true
           description = "deploy internet gateway to this environment"
           category    = "terraform"
         }
