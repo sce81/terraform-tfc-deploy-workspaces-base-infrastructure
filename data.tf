@@ -238,6 +238,72 @@ locals {
           category    = "terraform"
         }
       },
+      "import" = {
+        "vpc_name" = {
+          value       = "demo"
+          description = "vpc name identifier"
+          category    = "terraform"
+        },
+        "env_name" = {
+          value       = "import"
+          description = "env name for identifier"
+          category    = "terraform"
+        },
+        "project_name" = {
+          value       = "TFC Automation"
+          description = "Project name for tagging purposes"
+          category    = "terraform"
+        },
+        "vpc_cidr" = {
+          value       = "10.11.0.0/20"
+          description = "vpc network cidr"
+          category    = "terraform"
+        },
+        "public_subnet_cidr" = {
+          value       = join(", ", ["10.11.0.0/24", "10.11.1.0/24", "10.11.2.0/24"])
+          description = "public subnets cidr"
+          category    = "terraform"
+          hcl         = true
+        },
+        "private_subnet_cidr" = {
+          value       = join(", ", ["10.11.3.0/24", "10.11.4.0/24", "10.11.5.0/24"])
+          description = "private subnets cidr"
+          category    = "terraform"
+          hcl         = true
+        },
+        "database_subnet_cidr" = {
+          value       = join(", ", ["10.11.6.0/24", "10.11.7.0/24", "10.11.8.0/24"])
+          description = "database subnets cidr"
+          category    = "terraform"
+          hcl         = true
+        },
+        "cross_account_role" = {
+          value       = "public_base_infra_role"
+          description = "IAM Role for Terraform runner to assume"
+          category    = "terraform"
+        },
+        "enable_natgw" = {
+          value       = false
+          description = "deploy NAT gateway to this environment"
+          category    = "terraform"
+        },
+        "enable_igw" = {
+          value       = false
+          description = "deploy internet gateway to this environment"
+          category    = "terraform"
+        },
+        "vpc_id" = {
+          value       = "vpc-052ca643852248dea"
+          description = "ID for VPC to be imported"
+          category    = "terraform"
+        },
+        "public_subnet_name" = {
+          value       = "demo-import-public-*"
+          description = "Name of subnets to be imported"
+          category    = "terraform"
+        },
+      },
+
     }
   }
 }
