@@ -185,7 +185,7 @@ locals {
       },
       "public" = {
         "vpc_name" = {
-          value       = "public"
+          value       = "demo"
           description = "vpc name identifier"
           category    = "terraform"
         },
